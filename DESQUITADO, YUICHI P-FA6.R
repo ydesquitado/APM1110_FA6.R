@@ -11,7 +11,18 @@ print(paste0("Mean (in 2 decimal places): ", round(mean_x, 2)))
 print(paste0("Variance (in 2 decimal places): ", round(var_x, 2)))
 print(paste0("Standard Deviation (in 2 decimal places):  ", round(sd_x, 2)))
 
-plot(table(x)/1000,
+##### Plotting
+
+par(mfrow = c(1, 2))
+
+hist(x,
+     main = "Random Geometric Distribution (1000 Trials)",
+     xlab = "Number of Trials until First Success",
+     ylab = "Frequency",
+     col = "#AEF78E")
+plot(table(x) / length(x),
+     main = "Random Geometric Distribution (1000 Trials)",
      xlab = "Number of Trials until First Success",
      ylab = "Relative Frequency",
+     col = "#AEF78E",
      type = "h")
