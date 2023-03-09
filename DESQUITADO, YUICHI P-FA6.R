@@ -1,4 +1,7 @@
-x <- rgeom(1000, 0.2) + 1 # This will include the 1000 random variables before success and we add one (1) to include a success
+p <- 0.2 # Probability
+trials <- 1000 # Number of trials
+
+x <- rgeom(trials, p) + 1 # This will include the 1000 random variables before success and we add one (1) to include a success
 mean_x <- mean(x) # Mean of the random geometric distribution
 var_x <- var(x) # Variance of the random geometric distribution
 sd_x <- sd(x) # Standard Deviation of the random geometric distribution
